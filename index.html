@@ -1,0 +1,102 @@
+<html>
+    <head>
+
+        <title>Spokane River Young Single Adults</title>
+        <meta name = "keywords" content ="lds, latter-day saints, latter day saints, ysa, spokane">
+        <meta name = "viewport" content = "width=device-width">
+        <meta name = "description" content = "Information about the Spokane River Young Single Adults Ward">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="nav.js"></script>
+        <div id="homephoto"></div>
+        <h1 class="title">| Spokane River Young Single Adults |</h1>
+
+        <!-- partial:index.partial.html -->
+        <div id="calendar"></div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+        <!-- partial -->
+        <script  src="./script.js"></script>
+
+        <main>
+            <div class="post_line">
+                <ul id = "post_replace" style="list-style-type:none;">
+                </ul>
+                <script src="posts.js"></script>
+                <script>
+                    var container = document.querySelector("#post_replace");
+                    let index = 0;
+                    for (let item of items) {
+                        index++;
+                    var html = `
+                    <li>
+                        <post>
+                            <a href="${item.link}" style="text-decoration: none; ">
+                                <figure class = "float">
+                                    <img src=${item.img} width="100%" style="float: left;">
+                                </figure>
+                                <h4>
+                                    ${item.title}
+                                </h4>
+                                <p>
+                                    ${item.text}
+                                </p>
+                            </a>
+                        </post>
+                    </li>
+                    <br>
+                    `
+                    if(item.type.toUpperCase().search("EVENTS") != -1)
+                    {
+                        if(index < 4)
+                        {
+                            container.insertAdjacentHTML('beforeend', html);
+                        }
+                    }
+                }
+                </script>
+            </div>
+        </main>
+        <div class="prefoot">
+            <h1 class="important">News/Events</h1>
+            <div id="grid-std">
+
+            </div>
+        </div>
+        
+        <script src="/posts.js"></script>
+        <script>
+            var container = document.querySelector("#grid-std");
+            let indexx = 0;
+            for (let item of items) {
+                indexx++;
+            var html = `
+            <div class="blog-grid-item">
+            <a href=${item.link}>
+                <article class="post-preview">
+                    <figure class="post-preview-img">
+                        <img class="img-full" src=${item.img}>
+                    </figure>
+                    <div class="post-preview-content">
+                        <div class="green">${item.type}</div>
+                        <p>${item.title}</p>
+                        <div>${item.author}</div>
+                    </div>
+                </article>
+            </a>
+        </div>
+            `
+            if(indexx < 5)
+            {
+                container.insertAdjacentHTML('beforeend', html);
+            }
+        }
+        </script>
+        <footer>
+            <script id="foot_replace" src="footer.js"></script>
+        </footer>
+    </body>
+</html>

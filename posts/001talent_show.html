@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Spokane River YSA - Talent Show 2023</title>
+        <meta name = "keywords" content ="lds, latter-day saints, latter day saints, ysa, spokane">
+        <meta name = "viewport" content = "width=device-width">
+        <meta name = "description" content = "Information about the Mt. Spokane Young Single Adults Branch">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="/nav.js"></script>
+        <img src="/media/post1/01.jpg" style="width: 100%;">
+        
+        <main class="article">
+            <!--div class="caption">Photo by Nate St. George</div-->
+            <div class="date">Monday, August 14th, 2023</div>
+            <h1 class="post_title">Spokane River YSA Talent Show</h1>
+            <div class="author">
+                <!-- By <span class="green">Chris Price</div-->
+            </div>
+            <div class="social_links">
+                <!--a href="https://www.facebook.com/sharer/sharer.php?u=https://imchrisprice.com/posts/202302131.html" target="_blank"><ion-icon title="Share to Facebook" name="logo-facebook" class="social_icon"></ion-icon></a>
+                <a href="https://twitter.com/intent/tweet?text=https://imchrisprice.com/posts/202302131.html" target="_blank"><ion-icon title="Share to Twitter" name="logo-twitter" class="social_icon"></ion-icon></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://imchrisprice.com/posts/202302131.html" target="_blank"><ion-icon title="Share to LinkedIn" name="logo-linkedin" class="social_icon"></ion-icon></a>
+                <a href="http://www.pinterest.com/pin/create/button/?url=https://imchrisprice.com/posts/202302131.html" target="_blank"><ion-icon title="Share to Pinterest" name="logo-pinterest" class="social_icon"></ion-icon></a>
+                <a href="http://www.reddit.com/submit?url=https://imchrisprice.com/posts/202302131.html" target="_blank"><ion-icon title="Share to Reddit" name="logo-reddit" class="social_icon"></ion-icon></a>
+                <ion-icon title="Copy Link to Clipboard" name="link-outline" onClick="copyText()" class="social_icon"></ion-icon -->
+            </div>
+            <div id="notification">Link copied to clipboard!</div>
+            <h2>Put Together an Act</h2>
+            <p>
+                Music, skits, art, you name it! By yourself or with a group, come up with an act to perform for the YSA. No auditions required! We're very excited to see what you have to offer us.
+            </p>
+            <h2>Purpose of the Show</h2>
+            <p>
+                Our heavenly father has given us many talents that we're blessed to use in our daily lives. It's important for us to not only thank the Lord for the amazing talents we've been given but also to use them when needed. This talent show will act as a showcase for some of the wonderful gifts we've been blessed with.
+            </p>
+
+            
+        </main>
+        <div class="prefoot">
+            <h1 class="important">Latest News/Events</h1>
+            <div id="grid-std">
+
+            </div>
+        </div>
+        
+        <script src="/posts.js"></script>
+        <script>
+            var container = document.querySelector("#grid-std");
+            let index = 0;
+            for (let item of items) {
+                index++;
+            var html = `
+            <div class="blog-grid-item">
+            <a href=${item.link}>
+                <article class="post-preview">
+                    <figure class="post-preview-img">
+                        <img class="img-full" src=${item.img}>
+                    </figure>
+                    <div class="post-preview-content">
+                        <div class="green">${item.type}</div>
+                        <p>${item.title}</p>
+                        <div>${item.author}</div>
+                    </div>
+                </article>
+            </a>
+        </div>
+            `
+            if(index < 5)
+            {
+                container.insertAdjacentHTML('beforeend', html);
+            }
+        }
+        </script>
+        <script id="foot_replace" src="/footer.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            function copyText() {
+          
+                /* Copy text into clipboard */
+                navigator.clipboard.writeText("https://imchrisprice.com/posts/202302131.html");
+                var container = document.querySelector("#notification");
+                container.style.visibility = "visible";
+            }
+        </script>
+    </body>
+</html>

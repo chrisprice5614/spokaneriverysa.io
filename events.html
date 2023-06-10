@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Spokane River YSA - News</title>
+        <meta name = "keywords" content ="lds, latter-day saints, latter day saints, ysa, spokane">
+        <meta name = "viewport" content = "width=device-width">
+        <meta name = "description" content = "Information about the Spokane River YSA">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="nav.js"></script>
+        <h1 class="title">Events</h1>
+        <main>
+            <div class="post_line">
+                <ul id = "post_replace" style="list-style-type:none;">
+                </ul>
+                <script src="posts.js"></script>
+                <script>
+                    var container = document.querySelector("#post_replace");
+                    let index = 0;
+                    for (let item of items) {
+                        index++;
+                    var html = `
+                    <li>
+                        <post>
+                            <a href="${item.link}" style="text-decoration: none; ">
+                                <figure class = "float">
+                                    <img src=${item.img} width="100%" style="float: left;">
+                                </figure>
+                                <h4>
+                                    ${item.title}
+                                </h4>
+                                <p>
+                                    ${item.text}
+                                </p>
+                            </a>
+                        </post>
+                    </li>
+                    <br>
+                    `
+                    if(item.type.toUpperCase().search("EVENTS") != -1)
+                    {
+                        if(index < 10)
+                        {
+                            container.insertAdjacentHTML('beforeend', html);
+                        }
+                    }
+                }
+                </script>
+            </div>
+        </main>
+        <script id="foot_replace" src="footer.js"></script>
+    </body>
+</html>

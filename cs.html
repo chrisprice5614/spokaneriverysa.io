@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M23CYD5CPV"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-M23CYD5CPV');
+        </script>
+        <title>Chris Price - Programming</title>
+        <meta name = "keywords" content ="chris,price,composer,christian,music,arranger,VoxPrincipalis">
+        <meta name = "viewport" content = "width=device-width">
+        <meta name = "description" content = "Covering music, computer science and other topics.">
+        <meta name = "author" content = "Chris Price">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7616627780232147"
+     crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="nav.js"></script>
+        <h1 class="title">Programming</h1>
+        <main>
+            <div class="post_line">
+                <ul id = "post_replace" style="list-style-type:none;">
+                </ul>
+                <script src="posts.js"></script>
+                <script>
+                    var container = document.querySelector("#post_replace");
+                    let index = 0;
+                    for (let item of items) {
+                        index++;
+                    var html = `
+                    <li>
+                        <post>
+                            <a href="${item.link}" style="text-decoration: none; ">
+                                <figure class = "float">
+                                    <img src=${item.img} width="100%" style="float: left;">
+                                </figure>
+                                <h4>
+                                    ${item.title}
+                                </h4>
+                                <p>
+                                    ${item.text}
+                                </p>
+                            </a>
+                        </post>
+                    </li>
+                    <br>
+                    `
+                    if(item.type.toUpperCase().search("CS") != -1)
+                    {
+                        if(index < 10)
+                        {
+                            container.insertAdjacentHTML('beforeend', html);
+                        }
+                    }
+                }
+                </script>
+            </div>
+        </main>
+        <script id="foot_replace" src="footer.js"></script>
+    </body>
+</html>
