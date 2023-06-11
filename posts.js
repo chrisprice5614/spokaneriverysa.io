@@ -9,7 +9,7 @@ var items = [
         text: "Show off your amazing dance moves, impressive your date, and enjoy a nice time on the water! Friday, June 23rd, 2023",
         img: "/media/post2/boat.jpg",
         type: "EVENTS",
-        link: "/posts/002boat.html"
+        link: "/posts/002Boat.html"
     },
     {
         id: 2,
