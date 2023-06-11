@@ -397,7 +397,7 @@
 
     { eventName: "Talent Show @ Time & Location TBA", calendar: '/posts/001talent_show.html', color: 'blue', month: 08, day:14, year:2023 },
 
-{ eventName: "Pickle Ball Tournament @ 6:00 PM 5013 E Ballard Road", calendar: 'https://maps.app.goo.gl/76DjpupgweD2Ktii9', color: 'blue', month: 06, day:16, year:2023 }
+{ eventName: "Pickle Ball Tournament @ 6:00 PM 5013 E Ballard Road", calendar: 'https://maps.app.goo.gl/76DjpupgweD2Ktii9', color: 'blue', month: 06, day:16, year:2023 },
 
     
 
