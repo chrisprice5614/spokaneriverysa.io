@@ -393,7 +393,7 @@
     { eventName: "Sacrament Meeting @ 1:30 PM", calendar: '/visit.html', color: 'purple', month: 08, day:27, year:2023 },
 
     //Other events/Activities
-    { eventName: "Boat Dance @ Coeur D'Alene 6:00 PM", calendar: '/posts/002boat.html', color: 'blue', month: 06, day:23, year:2023 },
+    { eventName: "Boat Dance @ Coeur D'Alene 6:00 PM", calendar: '/posts/002Boat.html', color: 'blue', month: 06, day:23, year:2023 },
 
     { eventName: "Talent Show @ Time & Location TBA", calendar: '/posts/001talent_show.html', color: 'blue', month: 08, day:14, year:2023 },
 
