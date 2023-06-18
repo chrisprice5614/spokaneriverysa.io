@@ -360,6 +360,8 @@
 
     { eventName: "Crazy Fun Pool Party @ 5 Mile | 6:00 PM\n7504 N Audubon St", calendar: 'https://goo.gl/maps/iT6T4LocB8nptWUZ6', color: 'orange', month: 06, day:12, year:2023 },
 
+    { eventName: "Fire @ President Hardy's | 6:00 PM\n13936 N Boulder Park Lane", calendar: 'https://goo.gl/maps/VHxtgw89uorFrqxg8', color: 'orange', month: 06, day:19, year:2023 },
+
     //Tuesday Night
     { eventName: "Self Defense Class @ Gathering Place | 7:00 PM\n732 W Indiana Ave", calendar: 'https://www.google.com/maps/place/732+W+Indiana+Ave,+Spokane,+WA+99205', color: 'green', month: 06, day:13, year:2023 },
 

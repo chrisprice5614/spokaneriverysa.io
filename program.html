@@ -1,0 +1,192 @@
+<html>
+    <head>
+
+        <title>Spokane River Young Single Adults | Program</title>
+        <meta name = "keywords" content ="lds, latter-day saints, latter day saints, ysa, spokane">
+        <meta name = "viewport" content = "width=device-width">
+        <meta name = "description" content = "Information about the Spokane River Young Single Adults Ward">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="nav.js"></script>
+        <h1 class="title">| Sacrament Meeting |</h1>
+
+        <main>
+            <div class="prog">
+                <div class="centerTextAlignment">
+                    <h3>Welcome members, guests, visitors, and friends.</h3>
+                    <h2>Sunday, June 18th, 2023</h2>
+                    <h2>Father's Day</h2>
+                </div>
+                <div class="rows">
+                    <div class="columns">
+                        Presiding
+                        <br>Conducting
+                        <br>Pianist
+                        <br>Chorister
+                        <br>
+                        <br>Opening Hymn
+                        <br><div class="indentation"><i>"How Great Thou Art"</i></div>
+                    </div>
+                    <div class="columns">
+                        Bishop Matt Schupp
+                        <br>Rylan Simmons
+                        <br>Anyssa Batt
+                        <br>Spencer Sant
+                        <br>
+                        <br>#86
+                        <br>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="columns">
+                        <br>
+                        Invocation
+                        <br>Ward Business
+                        <br>
+                        <br>Sacrament Hymn
+                        <br><div class="indentation"><i>"God, Our Father, Hear Us Pray"</i></div>
+                    </div>
+                    <div class="columns">
+                        <br>
+                        Stephanie Billings
+                        <br>
+                        <br>
+                        <br>#170
+                        <br>
+                    </div>
+                </div>
+                <div class="centerTextAlignment">
+                    <h3>Sacrament administered by the Priesthood</h3>
+                </div>
+                <div class="rows">
+                    <div class="columns">
+                        Speaker
+                        <br>Speaker
+                        <br>
+                        <br>Music Number
+                        <br><div class="indentation"><i>"Each Life That Touches Ours for Good"</i></div>
+                    </div>
+                    <div class="columns">
+                        Elder Connor Morris
+                        <br>Michael Hazel
+                        <br>
+                        <br>David Richards
+                        <br>Graham Richards
+                        <br>Marilee Richards
+                        <br>Christian Price
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="columns">
+                        <br>
+                        Speaker
+                        <br>
+                        <br>Closing Hymn
+                        <br><div class="indentation"><i>"Called to Serve"</i></div>
+                    </div>
+                    <div class="columns">
+                        <br>
+                        Elder Cole Beynon
+                        <br>
+                        <br>#249
+                        <br>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="columns">
+                        <br>
+                        Benediction
+                    </div>
+                    <div class="columns">
+                        <br>
+                        DJ Knudson
+                    </div>
+                </div>
+                <div class="centerTextAlignment">
+                    <h2>Events This Week</h2>
+                </div>
+
+                <div class="rows">
+                    <div class="columns">
+                        <br>Monday, 6/19
+                    </div>
+                    <div class="columns">
+                        <br><a href="https://goo.gl/maps/VHxtgw89uorFrqxg8" target="_blank">Fire at President Hardy's @6</a>
+                    </div>
+                </div>
+
+                <div class="rows">
+                    <div class="columns">
+                        <br>Tuesday, 6/20
+                    </div>
+                    <div class="columns">
+                        <br><a href="https://www.google.com/maps/place/732+W+Indiana+Ave,+Spokane,+WA+99205" target="_blank">Self Defense + Dinner at Gathering Place @6:30</a>
+                    </div>
+                </div>
+                
+                <div class="rows">
+                    <div class="columns">
+                        <br>Thursday, 6/22
+                    </div>
+                    <div class="columns">
+                        <br><a href="/institute.html" target="_blank">Insititute + Dinner @6:30</a>
+                    </div>
+                </div>
+                
+                <div class="rows">
+                    <div class="columns">
+                        <br>Friday, 6/23
+                    </div>
+                    <div class="columns">
+                        <br><a href="/posts/002Boat.html" target="_blank">Boat Dance BOARDING @ 6:30</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+        </main>
+        <div class="prefoot">
+            <h1 class="important">News/Events</h1>
+            <div id="grid-std">
+
+            </div>
+        </div>
+        
+        <script src="/posts.js"></script>
+        <script>
+            var container = document.querySelector("#grid-std");
+            let indexx = 0;
+            for (let item of items) {
+                indexx++;
+            var html = `
+            <div class="blog-grid-item">
+            <a href=${item.link}>
+                <article class="post-preview">
+                    <figure class="post-preview-img">
+                        <img class="img-full" src=${item.img}>
+                    </figure>
+                    <div class="post-preview-content">
+                        <div class="green">${item.type}</div>
+                        <p>${item.title}</p>
+                        <div>${item.author}</div>
+                    </div>
+                </article>
+            </a>
+        </div>
+            `
+            if(indexx < 5)
+            {
+                container.insertAdjacentHTML('beforeend', html);
+            }
+        }
+        </script>
+        <footer>
+            <script id="foot_replace" src="footer.js"></script>
+        </footer>
+    </body>
+</html>
