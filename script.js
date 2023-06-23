@@ -367,7 +367,7 @@
 
     { eventName: "Self Defense Class @ Gathering Place | 7:00 PM\n732 W Indiana Ave", calendar: 'https://www.google.com/maps/place/732+W+Indiana+Ave,+Spokane,+WA+99205', color: 'green', month: 06, day:20, year:2023 },
 
-{ eventName: "Volleyball + Dinner @ Gathering Place | 6:30 PM\n732 W Indiana Ave", calendar: 'https://www.google.com/maps/place/732+W+Indiana+Ave,+Spokane,+WA+99205', color: 'green', month: 06, day:20, year:2023 },
+{ eventName: "Volleyball + Dinner @ Gathering Place | 6:30 PM\n732 W Indiana Ave", calendar: 'https://www.google.com/maps/place/732+W+Indiana+Ave,+Spokane,+WA+99205', color: 'green', month: 06, day:27, year:2023 },
 
     //Just throwing in all the church dates
     { eventName: "Sacrament Meeting @ 1:30 PM", calendar: '/visit.html', color: 'purple', month: 06, day:04, year:2023 },
