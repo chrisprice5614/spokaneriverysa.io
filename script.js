@@ -362,7 +362,7 @@
 
     { eventName: "Fire @ President Hardy's | 7:00 PM\n13936 N Boulder Park Lane", calendar: 'https://goo.gl/maps/VHxtgw89uorFrqxg8', color: 'orange', month: 06, day:19, year:2023 },
 
-{ eventName: "Activity @ The Bishop's House 7:00 | PM\n401 W Regina Ave", calendar: 'https://maps.app.goo.gl/76DjpupgweD2Ktii9', color: 'orange', month: 06, day:26, year:2023 },
+{ eventName: "Activity @ The Bishop's House 7:00 | PM\n5013 E Ballard Road", calendar: 'https://maps.app.goo.gl/76DjpupgweD2Ktii9', color: 'orange', month: 06, day:26, year:2023 },
 
     //Tuesday Night
     { eventName: "Self Defense Class @ Gathering Place | 7:00 PM\n732 W Indiana Ave", calendar: 'https://www.google.com/maps/place/732+W+Indiana+Ave,+Spokane,+WA+99205', color: 'green', month: 06, day:13, year:2023 },
