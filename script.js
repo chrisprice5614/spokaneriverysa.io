@@ -330,6 +330,16 @@
 
     //Institue
     { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'yellow', month: 06, day:08, year:2023 },
+
+{ eventName: "Relief Society 12 Favorite Things @ 6:00 PM at Bishop Schupp's", calendar: 'https://maps.app.goo.gl/TjTMZimRndJfTcTC7', color: 'yellow', month: 07, day:21, year:2023 },
+
+{ eventName: 'Elders Quorum Laser Tag @ 6:00 PM at Wonder Land', calendar: 'https://maps.app.goo.gl/rcEjt6nxCvQNG5Ua7', color: 'yellow', month: 07, day:21, year:2023 },
+
+{ eventName: 'Institite @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'yellow', month: 07, day:20, year:2023 },
+
+{ eventName: 'Four Square Tournament @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'yellow', month: 07, day:18, year:2023 },
+
+ { eventName: 'Boating @ 6:00 PM at 9400 W Ownby Nine Mile Falls, WA', calendar: 'https://maps.app.goo.gl/uV9faUkuxnn3XZQNA', color: 'yellow', month: 07, day:17, year:2023 },
 
   ];
 
