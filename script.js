@@ -342,7 +342,7 @@
 { eventName: 'Boating @ 6:00 PM at 9400 W Ownby Nine Mile Falls, WA', calendar: 'https://maps.app.goo.gl/uV9faUkuxnn3XZQNA', color: 'yellow', month: 07, day:17, year:2023 },
 
     //Week of 7/23
-{ eventName: 'Karaoke and card Games @ 7:00 PM at 5302 E Greenbluff Rd, Colbert, WA 99005', calendar: 'https://goo.gl/maps/AvuCzWPhq4vktRfZ6', color: 'yellow', month: 07, day:24, year:2023 },
+{ eventName: 'Karaoke and card Games @ 7:00 PM at 401 W Regina Ave, Spokane, WA 99218', calendar: 'https://maps.app.goo.gl/EnCpRJUoQPQAzHTX6', color: 'yellow', month: 07, day:24, year:2023 },
     
 { eventName: 'Swing Dance Lessons @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 07, day:25, year:2023 },
 
