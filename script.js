@@ -328,19 +328,28 @@
 !function() {
   var data = [
 
-    //Institue
-    { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'yellow', month: 06, day:08, year:2023 },
+
+{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'yellow', month: 06, day:08, year:2023 },
 
 { eventName: "Relief Society 12 Favorite Things @ 6:00 PM at Bishop Schupp's", calendar: 'https://maps.app.goo.gl/TjTMZimRndJfTcTC7', color: 'yellow', month: 07, day:21, year:2023 },
 
 { eventName: 'Elders Quorum Laser Tag @ 6:00 PM at Wonder Land', calendar: 'https://maps.app.goo.gl/rcEjt6nxCvQNG5Ua7', color: 'yellow', month: 07, day:21, year:2023 },
 
-{ eventName: 'Institite @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'yellow', month: 07, day:20, year:2023 },
+{ eventName: 'Institite @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'red', month: 07, day:20, year:2023 },
 
-{ eventName: 'Four Square Tournament @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'yellow', month: 07, day:18, year:2023 },
+{ eventName: 'Four Square Tournament @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 07, day:18, year:2023 },
 
- { eventName: 'Boating @ 6:00 PM at 9400 W Ownby Nine Mile Falls, WA', calendar: 'https://maps.app.goo.gl/uV9faUkuxnn3XZQNA', color: 'yellow', month: 07, day:17, year:2023 },
-
+{ eventName: 'Boating @ 6:00 PM at 9400 W Ownby Nine Mile Falls, WA', calendar: 'https://maps.app.goo.gl/uV9faUkuxnn3XZQNA', color: 'yellow', month: 07, day:17, year:2023 },
+
+    //Week of 7/23
+{ eventName: 'Karaoke and card Games @ 7:00 PM at 5302 E Greenbluff Rd, Colbert, WA 99005', calendar: 'https://goo.gl/maps/AvuCzWPhq4vktRfZ6', color: 'yellow', month: 07, day:24, year:2023 },
+    
+{ eventName: 'Swing Dance Lessons @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 07, day:25, year:2023 },
+
+{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'red', month: 07, day:27, year:2023 },
+
+{ eventName: 'Barn Dance @ 7:00 PM at 16926 E 44th Ave, Greenacres, WA 99016', calendar: 'https://goo.gl/maps/337uLscXEXZ4dJTu6', color: 'yellow', month: 07, day:28, year:2023 },
+
   ];
 
   
