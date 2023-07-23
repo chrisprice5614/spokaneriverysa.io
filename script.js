@@ -335,7 +335,7 @@
 
 { eventName: 'Elders Quorum Laser Tag @ 6:00 PM at Wonder Land', calendar: 'https://maps.app.goo.gl/rcEjt6nxCvQNG5Ua7', color: 'yellow', month: 07, day:21, year:2023 },
 
-{ eventName: 'Institite @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'red', month: 07, day:20, year:2023 },
+{ eventName: 'Institite @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'blue', month: 07, day:20, year:2023 },
 
 { eventName: 'Four Square Tournament @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 07, day:18, year:2023 },
 
@@ -346,7 +346,7 @@
     
 { eventName: 'Swing Dance Lessons @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 07, day:25, year:2023 },
 
-{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'red', month: 07, day:27, year:2023 },
+{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 07, day:27, year:2023 },
 
 { eventName: 'Barn Dance @ 7:00 PM at 16926 E 44th Ave, Greenacres, WA 99016', calendar: 'https://goo.gl/maps/337uLscXEXZ4dJTu6', color: 'yellow', month: 07, day:28, year:2023 },
 
