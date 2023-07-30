@@ -2,16 +2,6 @@
 //Always add to the top
 var items = [
     {
-        id: 1,
-        title: "Boat Dance June 23rd",
-        date: "Friday, June 23rd, 2023",
-        author: "",
-        text: "Show off your amazing dance moves, impressive your date, and enjoy a nice time on the water! Friday, June 23rd, 2023",
-        img: "/media/post2/boat.jpg",
-        type: "EVENTS",
-        link: "/posts/002Boat.html"
-    },
-    {
         id: 2,
         title: "Talent Show August 14th",
         date: "Monday, August 14th, 2023",
