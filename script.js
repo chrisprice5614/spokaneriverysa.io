@@ -351,7 +351,7 @@
 { eventName: 'Barn Dance @ 7:00 PM at 16926 E 44th Ave, Greenacres, WA 99016', calendar: 'https://goo.gl/maps/337uLscXEXZ4dJTu6', color: 'yellow', month: 07, day:28, year:2023 },
 
 //Week of 7/30
-{ eventName: 'Hangout at the Schupps @ 7:00 pm at 5013 E Ballard Rd', calendar: 'https://goo.gl/maps/hHHNNuLcPfGU5pyx9', color: 'yellow', month: 07, day:31, year:2023 },
+{ eventName: 'Hangout at the Schupps @ 6:00 pm at 5013 E Ballard Rd', calendar: 'https://goo.gl/maps/hHHNNuLcPfGU5pyx9', color: 'yellow', month: 07, day:31, year:2023 },
     
 { eventName: 'Nerf War @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:01, year:2023 },
 
