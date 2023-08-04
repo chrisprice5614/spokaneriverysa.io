@@ -357,7 +357,7 @@
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 08, day:03, year:2023 },
 
-{ eventName: 'Kickball @ 7:00 PM 401 West Regina Ave, Spokane, WA 99005', calendar: 'https://maps.app.goo.gl/RQFRTvxSehXKiYXr9', color: 'yellow', month: 08, day:04, year:2023 },
+{ eventName: 'Kickball @ 6:00 PM 401 West Regina Ave, Spokane, WA 99005', calendar: 'https://maps.app.goo.gl/RQFRTvxSehXKiYXr9', color: 'yellow', month: 08, day:04, year:2023 },
 
   ];
 
