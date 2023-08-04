@@ -357,7 +357,7 @@
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 08, day:03, year:2023 },
 
-{ eventName: 'Kickball @ 7:00 PM at 5302 E Greenbluff Rd, Colbert, WA 99005', calendar: 'https://goo.gl/maps/5FwgG4C6Gb9nc7Wo9', color: 'yellow', month: 08, day:04, year:2023 },
+{ eventName: 'Kickball @ 7:00 PM 401 West Regina Ave, Spokane, WA 99005', calendar: 'https://maps.app.goo.gl/RQFRTvxSehXKiYXr9', color: 'yellow', month: 08, day:04, year:2023 },
 
   ];
 
