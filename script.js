@@ -362,9 +362,6 @@ Spokane Valley, WA  99216
 United States', calendar: 'https://maps.app.goo.gl/C8jSgJVBaPoUF1m69', color: 'yellow', month: 08, day:04, year:2023 },
 
 
-
-
-
   ];
 
   
