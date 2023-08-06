@@ -362,14 +362,7 @@ Spokane Valley, WA  99216
 United States', calendar: 'https://maps.app.goo.gl/C8jSgJVBaPoUF1m69', color: 'yellow', month: 08, day:04, year:2023 },
 
 
-//Week of 8/6
-{ eventName: 'Volleyball @ 7:00 pm at 401 W Regina Ave, Spokane, WA 99218', calendar: 'https://maps.app.goo.gl/S5s2WmPNZcPJT2Sp9', color: 'yellow', month: 08, day:07, year:2023 },
-    
-{ eventName: 'Car Maintenance @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:08, year:2023 },
 
-{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 08, day:10, year:2023 },
-
-{ eventName: 'Hang out at the Brauns @ 6:00 PM 4311 W Center Ln, Spokane, WA 99208', calendar: 'https://maps.app.goo.gl/zCaKYYefS21KbcRSA', color: 'yellow', month: 08, day:11, year:2023 },
 
 
   ];
