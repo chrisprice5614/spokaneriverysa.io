@@ -340,7 +340,7 @@
 
 
 //Week of 8/13
-    { eventName: 'Talent Show @ 6:30 pm at 401 W Regina Ave, Spokane, WA 99218', calendar: 'https://maps.app.goo.gl/S5s2WmPNZcPJT2Sp9', color: 'yellow', month: 08, day:14, year:2023 },
+    { eventName: 'Talent Show @ 7:00 pm at 401 W Regina Ave, Spokane, WA 99218', calendar: 'https://maps.app.goo.gl/S5s2WmPNZcPJT2Sp9', color: 'yellow', month: 08, day:14, year:2023 },
     
 { eventName: 'Work Life Balance @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:15, year:2023 },
 
