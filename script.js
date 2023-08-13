@@ -344,7 +344,7 @@
     
 { eventName: 'Work Life Balance @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:15, year:2023 },
 
-    { eventName: 'Temple Trip Meet @ 5:00 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:16, year:2023 },
+    { eventName: 'Temple Trip Meet @ 5:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:16, year:2023 },
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 08, day:17, year:2023 },
 
