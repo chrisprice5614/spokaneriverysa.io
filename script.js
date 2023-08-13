@@ -348,7 +348,7 @@
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 08, day:17, year:2023 },
 
-{ eventName: 'Campout @ 6:00 PM 37121 N Lakeside Dr, Elk, WA 99009', calendar: 'https://goo.gl/maps/mBqZUTamVTVhqtwp8', color: 'yellow', month: 08, day:18, year:2023 },
+{ eventName: 'Campout @ 5:30 PM - Meet at the Regina Building, 401 W Regina - Campout at 37121 N Lakeside Dr, Elk, WA 99009', calendar: 'https://goo.gl/maps/mBqZUTamVTVhqtwp8', color: 'yellow', month: 08, day:18, year:2023 },
 
   ];
 
