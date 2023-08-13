@@ -338,6 +338,18 @@
 
 { eventName: 'Hang out at the Brauns @ 6:00 PM 4311 W Center Ln, Spokane, WA 99208', calendar: 'https://maps.app.goo.gl/zCaKYYefS21KbcRSA', color: 'yellow', month: 08, day:11, year:2023 },
 
+
+//Week of 8/13
+    { eventName: 'Talent Show @ 6:30 pm at 401 W Regina Ave, Spokane, WA 99218', calendar: 'https://maps.app.goo.gl/S5s2WmPNZcPJT2Sp9', color: 'yellow', month: 08, day:14, year:2023 },
+    
+{ eventName: 'Work Life Balance @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:15, year:2023 },
+
+    { eventName: 'Temple Trip Meet @ 5:00 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:16, year:2023 },
+
+{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 08, day:17, year:2023 },
+
+{ eventName: 'Campout @ 6:00 PM 37121 N Lakeside Dr, Elk, WA 99009', calendar: 'https://goo.gl/maps/mBqZUTamVTVhqtwp8', color: 'yellow', month: 08, day:18, year:2023 },
+
   ];
 
   
