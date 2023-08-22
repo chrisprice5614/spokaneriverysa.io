@@ -353,7 +353,7 @@
 //Week of 8/21
     { eventName: 'Feeding Homeless at 5 @ the gathering place. There will be games at 6:30', calendar: 'https://goo.gl/maps/4c1r2Ax7HGjsdTEb6', color: 'yellow', month: 08, day:21, year:2023 },
     
-{ eventName: 'Ultimate Frisbee @ 6:30 PM at Manito Park', calendar: 'https://maps.app.goo.gl/GkMvDH1LyWCtZq447', color: 'green', month: 08, day:22, year:2023 },
+{ eventName: 'Games @ 6:30 PM at 2112 W Francis', calendar: 'https://maps.app.goo.gl/a6yCYcWESuvvMPfWA', color: 'green', month: 08, day:22, year:2023 },
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 08, day:24, year:2023 },
 
