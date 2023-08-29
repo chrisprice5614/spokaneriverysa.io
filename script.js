@@ -364,6 +364,8 @@
     
 { eventName: 'Battle of the Bands @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 08, day:29, year:2023 },
 
+{ eventName: 'Temple Trip at 4:30', calendar: 'https://maps.app.goo.gl/GrHAsfBFnUGayjyE7', color: 'green', month: 08, day:30, year:2023 },
+
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 08, day:31, year:2023 },
 
 { eventName: 'Movie Night at the Schupps @ 7:00 PM', calendar: 'https://goo.gl/maps/FVAcSdwhtCgQBYwR9', color: 'yellow', month: 09, day:01, year:2023 },
