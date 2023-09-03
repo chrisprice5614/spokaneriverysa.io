@@ -370,6 +370,18 @@
 
 { eventName: 'Movie Night at the Schupps @ 7:00 PM', calendar: 'https://goo.gl/maps/FVAcSdwhtCgQBYwR9', color: 'yellow', month: 09, day:01, year:2023 },
 
+
+//Week of 91
+    { eventName: 'Volleyball and Frisbee @ 6:30 PM at 403 W Regina', calendar: 'https://maps.app.goo.gl/6wg4Yyw7z5tbqfgf8', color: 'yellow', month: 09, day:03, year:2023 },
+    
+{ eventName: 'Pickelball @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 09, day:04, year:2023 },
+
+{ eventName: 'Regional Choir', calendar: 'https://maps.app.goo.gl/8dBqAWc7FCPR4s8a8', color: 'green', month: 09, day:5, year:2023 },
+
+{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 09, day:6, year:2023 },
+
+{ eventName: 'Bible Study and Pillow Fight @ 6:30 PM at Bishop Schupp Place', calendar: 'https://goo.gl/maps/FVAcSdwhtCgQBYwR9', color: 'yellow', month: 09, day:07, year:2023 },
+
     
   ];
 
