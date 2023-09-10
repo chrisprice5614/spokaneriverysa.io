@@ -383,15 +383,15 @@
 { eventName: 'Bible Study and Pillow Fight @ 6:30 PM at Bishop Schupp Place', calendar: 'https://goo.gl/maps/FVAcSdwhtCgQBYwR9', color: 'yellow', month: 09, day:08, year:2023 },
 
     //Week of 91
-    { eventName: 'Volleyball and Frisbee @ 6:30 PM at 403 W Regina', calendar: 'https://maps.app.goo.gl/6wg4Yyw7z5tbqfgf8', color: 'yellow', month: 09, day:11, year:2023 },
+    { eventName: 'Game Night @ 6:30 PM at the Hardy Househald', calendar: 'https://goo.gl/maps/Udjtv7oy7MXeRrqm8', color: 'yellow', month: 09, day:11, year:2023 },
     
-{ eventName: 'Pickelball @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 09, day:12, year:2023 },
+{ eventName: 'Self Reliance Class @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 09, day:12, year:2023 },
 
 { eventName: 'Regional Choir', calendar: 'https://maps.app.goo.gl/8dBqAWc7FCPR4s8a8', color: 'green', month: 09, day:13, year:2023 },
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 09, day:14, year:2023 },
 
-{ eventName: 'Bible Study and Pillow Fight @ 6:30 PM at Bishop Schupp Place', calendar: 'https://goo.gl/maps/FVAcSdwhtCgQBYwR9', color: 'yellow', month: 09, day:15, year:2023 },
+{ eventName: 'Sardines @ 7:00 PM at Bishop Schupp Place', calendar: 'https://goo.gl/maps/9sqr9oa18VeVz7qE7', color: 'yellow', month: 09, day:15, year:2023 },
 
     
   ];
