@@ -391,7 +391,7 @@
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 09, day:14, year:2023 },
 
-{ eventName: 'Sardines @ 7:00 PM at Bishop Schupp Place', calendar: 'https://goo.gl/maps/9sqr9oa18VeVz7qE7', color: 'yellow', month: 09, day:15, year:2023 },
+{ eventName: 'Sardines @ 7 PM at the Gathering Place', calendar: 'https://goo.gl/maps/9sqr9oa18VeVz7qE7', color: 'yellow', month: 09, day:15, year:2023 },
 
     
   ];
