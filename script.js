@@ -396,11 +396,13 @@
     //Week of 9 17
     { eventName: 'Art/Temple History @ 7:00 PM at the Gathering Place', calendar: 'https://goo.gl/maps/9sqr9oa18VeVz7qE7', color: 'yellow', month: 09, day:18, year:2023 },
     
-{ eventName: 'Self Reliance Class @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 09, day:19, year:2023 },
+{ eventName: 'Open House @ 6:30 PM at Gathering Place', calendar: '/institute.html', color: 'green', month: 09, day:19, year:2023 },
 
 { eventName: 'Regional Choir', calendar: 'https://maps.app.goo.gl/8dBqAWc7FCPR4s8a8', color: 'green', month: 09, day:20, year:2023 },
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 09, day:21, year:2023 },
+
+{ eventName: 'Swing Dance / Karaoke @ 6:30 PM place to be determined', calendar: '/institute.html', color: 'blue', month: 09, day:22, year:2023 },
 
 
     
