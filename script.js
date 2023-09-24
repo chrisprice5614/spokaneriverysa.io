@@ -405,6 +405,18 @@
 { eventName: 'Swing Dance / Karaoke @ 6:30 PM place to be determined', calendar: '/institute.html', color: 'blue', month: 09, day:22, year:2023 },
 
 
+    //Week of 9 24
+    { eventName: 'Trivia Night @ 7:00 PM at 401 West Regina', calendar: 'https://maps.app.goo.gl/nm7HNY38yVMu9vCRA', color: 'yellow', month: 09, day:25, year:2023 },
+    
+{ eventName: 'Volleyball @ 6:30 PM at 1620 E 29th Ave', calendar: 'https://maps.app.goo.gl/uE5RmGqMiswhnkBy9', color: 'green', month: 09, day:26, year:2023 },
+
+{ eventName: 'Regional Choir', calendar: 'https://maps.app.goo.gl/8dBqAWc7FCPR4s8a8', color: 'green', month: 09, day:27, year:2023 },
+
+{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 09, day:28, year:2023 },
+
+{ eventName: 'Temple Trip @ 5:45 PM', calendar: 'https://maps.app.goo.gl/FaKi4p5LiqSZeHbC7', color: 'blue', month: 09, day:29, year:2023 },
+
+
     
   ];
 
