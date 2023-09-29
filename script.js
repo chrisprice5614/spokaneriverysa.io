@@ -416,6 +416,10 @@
 
 { eventName: 'Temple Trip @ 5:45 PM', calendar: 'https://maps.app.goo.gl/FaKi4p5LiqSZeHbC7', color: 'blue', month: 09, day:29, year:2023 },
 
+{ eventName: 'General Conference at Bishop Schupp', calendar: 'https://maps.app.goo.gl/jTnvY32KHjmDMsir5', color: 'blue', month: 09, day:30, year:2023 },
+
+{ eventName: 'General Conference at Gathering Place', calendar: 'https://maps.app.goo.gl/fmtgVQbCkVenLxqW6', color: 'blue', month: 10, day:01, year:2023 },
+
 
     
   ];
