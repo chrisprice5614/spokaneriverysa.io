@@ -421,6 +421,10 @@
 { eventName: 'General Conference at Gathering Place', calendar: 'https://maps.app.goo.gl/fmtgVQbCkVenLxqW6', color: 'blue', month: 10, day:01, year:2023 },
 
 
+//Week of 10 2
+    { eventName: 'Trivia Night @ 7:00 PM at 401 West Regina', calendar: 'https://maps.app.goo.gl/nm7HNY38yVMu9vCRA', color: 'yellow', month: 10, day:2, year:2023 },
+
+
     
   ];
 
