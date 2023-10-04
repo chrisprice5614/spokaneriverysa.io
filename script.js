@@ -424,6 +424,12 @@
 //Week of 10 2
     { eventName: 'Trivia Night @ 7:00 PM at 401 West Regina', calendar: 'https://maps.app.goo.gl/nm7HNY38yVMu9vCRA', color: 'yellow', month: 10, day:2, year:2023 },
 
+    { eventName: 'Regional Choir', calendar: 'https://maps.app.goo.gl/8dBqAWc7FCPR4s8a8', color: 'green', month: 10, day:04, year:2023 },
+
+{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 10, day:05, year:2023 },
+
+{ eventName: 'Video Game Night @ 6:30 PM at Bishop', calendar: 'https://maps.app.goo.gl/jTnvY32KHjmDMsir5', color: 'blue', month: 10, day:06, year:2023 },
+
 
     
   ];
