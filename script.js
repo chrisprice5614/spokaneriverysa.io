@@ -430,6 +430,17 @@
 
 { eventName: 'Video Game Night @ 6:30 PM at Bishop', calendar: 'https://maps.app.goo.gl/jTnvY32KHjmDMsir5', color: 'blue', month: 10, day:06, year:2023 },
 
+    //Week of 10 2
+    { eventName: 'Capture the flag @ 7:00 PM at 401 West Regina', calendar: 'https://maps.app.goo.gl/nm7HNY38yVMu9vCRA', color: 'yellow', month: 10, day:9, year:2023 },
+
+    { eventName: 'Investing Class @ 6:30 PM at Gathering Place', calendar: 'https://maps.app.goo.gl/uE5RmGqMiswhnkBy9', color: 'green', month: 10, day:10, year:2023 },
+
+    { eventName: 'Regional Choir', calendar: 'https://maps.app.goo.gl/8dBqAWc7FCPR4s8a8', color: 'green', month: 10, day:11, year:2023 },
+
+{ eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 10, day:12, year:2023 },
+
+{ eventName: 'Video Game Night @ 6:30 PM at Bishop', calendar: 'https://maps.app.goo.gl/jTnvY32KHjmDMsir5', color: 'blue', month: 10, day:13, year:2023 },
+
 
     
   ];
