@@ -447,7 +447,7 @@
 
 
     //Week of 10 15
-{ eventName: 'Capture the flag @ 6:30 PM at 401 West Regina', calendar: 'https://maps.app.goo.gl/B78GrX1aLz4ct4Yn7', color: 'yellow', month: 10, day:16, year:2023 },
+{ eventName: 'Pumpkin Carving @ 7 PM at the gathering place', calendar: 'https://maps.app.goo.gl/B78GrX1aLz4ct4Yn7', color: 'yellow', month: 10, day:16, year:2023 },
 
 { eventName: 'Jamacian Cooking Class @ 6:30 PM at Gathering Place', calendar: 'https://maps.app.goo.gl/uE5RmGqMiswhnkBy9', color: 'green', month: 10, day:17, year:2023 },
 
