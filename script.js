@@ -454,6 +454,8 @@
 { eventName: 'Regional Choir', calendar: 'https://maps.app.goo.gl/8dBqAWc7FCPR4s8a8', color: 'green', month: 10, day:18, year:2023 },
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 10, day:19, year:2023 },
+
+    { eventName: 'Party at Bishop Place @ 6:30 PM at 5013 W Ballard Rd', calendar: 'https://maps.app.goo.gl/jTnvY32KHjmDMsir5', color: 'blue', month: 10, day:20, year:2023 },
     
   ];
 
