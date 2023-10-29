@@ -458,18 +458,21 @@
     { eventName: 'Party at Bishop Place @ 6:30 PM at 5013 W Ballard Rd', calendar: 'https://maps.app.goo.gl/jTnvY32KHjmDMsir5', color: 'blue', month: 10, day:20, year:2023 },
 
  //Week of 10 29
-{ eventName: 'Pumpkin Carving @ 7 PM at the Regina Building', calendar: 'https://maps.app.goo.gl/nm7HNY38yVMu9vCRA', color: 'yellow', month: 10, day:30, year:2023 },
+{ eventName: 'Chair Soccer @ 7:00 PM at Regina Building', calendar: 'https://maps.app.goo.gl/nm7HNY38yVMu9vCRA', color: 'yellow', month: 10, day:30, year:2023 },
 
-{ eventName: 'Halloween Party @ 6:30 PM at Gathering Place', calendar: 'https://maps.app.goo.gl/uE5RmGqMiswhnkBy9', color: 'green', month: 10, day:31, year:2023 },
+{ eventName: 'Halloween Party @ 6:30 PM at Gathering Place', calendar: 'https://maps.app.goo.gl/DVPwWKz44A3sBFhN6', color: 'green', month: 10, day:31, year:2023 },
 
 { eventName: 'Regional Choir', calendar: 'https://maps.app.goo.gl/8dBqAWc7FCPR4s8a8', color: 'green', month: 11, day:01, year:2023 },
 
 { eventName: 'Institute @ 6:30 PM', calendar: '/institute.html', color: 'blue', month: 11, day:02, year:2023 },
 
-    { eventName: 'Party at Bishop Place @ 6:30 PM at 5013 W Ballard Rd', calendar: 'https://maps.app.goo.gl/jTnvY32KHjmDMsir5', color: 'blue', month: 11, day:03, year:2023 },
+    { eventName: 'Pot Luck + Movie Night @ 7:00 PM, At the Gathering Place', calendar: 'https://maps.app.goo.gl/B78GrX1aLz4ct4Yn7', color: 'blue', month: 11, day:03, year:2023 },
 
 //Friendsgiving November
   { eventName: 'Friendsgiving', calendar: 'https://maps.app.goo.gl/uE5RmGqMiswhnkBy9', color: 'blue', month: 11, day:24, year:2023 },
+
+    //Friendsgiving November
+  { eventName: 'Christmas Party @ 401 W Regina', calendar: 'https://maps.app.goo.gl/nm7HNY38yVMu9vCRA', color: 'blue', month: 12, day:18, year:2023 },
     
 
     
