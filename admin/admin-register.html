@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spokane River YSA | Register</title>
+        <meta name="description" content="Welcome to the Spokane River Young Single Adults ward website! Here you can get information on when our activities are, who the bishopric is, and what our goals are for growing us spiritually and socially."/>
+        <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="https://use.typekit.net/pcf1uvo.css">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+        <script>
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active-now");
+                } else {
+                reveals[i].classList.remove("active-now");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="/nav.js"></script>
+
+        
+        <main>
+        <hr class="title-hr">
+        
+
+        <h1>Add New User</h1>
+        <div style="width:80%; margin:auto;">
+            <div class="row">
+                <div class="columns-stack">
+                    <div style="text-align:right;">Username:</div>
+                </div>
+                <div class="columns-stack">
+                    <div contenteditable class="cont-edit" id="input-reg-username" style="text-align:left;"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="columns-stack">
+                    <div style="text-align:right;">Password:</div>
+                </div>
+                <div class="columns-stack">
+                    <div contenteditable class="cont-edit" id="input-reg-password" style="text-align:left; -webkit-text-security: disc;"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="columns-stack">
+                    <div style="text-align:right;">Password Confirmation:</div>
+                </div>
+                <div class="columns-stack">
+                    <div contenteditable class="cont-edit" id="input-reg-confirm" style="text-align:left; -webkit-text-security: disc;"></div>
+                </div>
+            </div>
+            <br>
+            <b>NOTICE:</b> Do <b>NOT</b> create a new user for someone who already has account. Do <b>NOT</b> create a new account if a password has been forggotten. Email <a href="mailto:chrisprice5614@gmail.com">support</a> for help with forgotten passwords.
+        </div>
+
+        
+        <br>
+        <button onclick="verifyLogin()" class="admin-button">Add User</button>
+
+        <!--
+        <table>
+            <tr><td><div contenteditable>I'm editable</div></td><td><div contenteditable>I'm also editable</div></td></tr>
+            <tr><td>I'm not editable</td></tr>
+            </table>
+            -->
+        <div id = "before_replace"></div>
+        <div id = "post_replace"></div>
+        <div id = "msg_replace"></div>
+            
+            <br>
+            
+        </main>
+
+    <footer>
+        <script id="foot_replace" src="/footer.js"></script>
+    </footer>
+    </body>
+    <script>
+
+        if(!sessionStorage.getItem("loggedIn"))
+        {
+            document.location.href = "/admin/admin-login.html";
+        }
+
+        function submitInfo(key){
+            var table = document.getElementById("addRowsHere");
+            var check = document.getElementById("input-reg-username");
+            var uName = check.innerText;
+            var checkP = document.getElementById("input-reg-password");
+            var pWord = checkP.innerText;
+            var checkPP = document.getElementById("input-reg-confirm");
+            var cWord = checkPP.innerText;
+
+            var obj = {"TitleId":"3524C","Password":pWord,"Username":uName,"DisplayName":uName,"RequireBothUsernameAndEmail":false};
+            
+            let req = new XMLHttpRequest();
+
+            req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+                    
+                    let preJson = JSON.parse(req.responseText);
+
+                    if(preJson.status == "OK")
+                    {
+
+                        var container = document.querySelector("#msg_replace");
+                        var newElement = document.createElement('div');
+                        newElement.id = "msg_replace";
+                        newElement.className = "complete-class";
+
+                        newElement.textContent = "Added User!!";
+
+                        container.replaceWith(newElement);
+                    }
+                    else
+                    {
+                        let errorMsg = "";
+                        if(preJson.errorDetails.Password!=undefined)
+                        {
+                            errorMsg += preJson.errorDetails.Password + "\n";
+                        }
+                        if(preJson.errorDetails.Username!=undefined)
+                        {
+                            errorMsg += preJson.errorDetails.Username;
+                        }
+                        var container = document.querySelector("#post_replace");
+                        var html = '';
+                        var newElement = document.createElement('div');
+                        newElement.id = "post_replace";
+                        newElement.className = "error-class";
+                        newElement.textContent = errorMsg;
+                        container.replaceWith(newElement);
+                    }
+
+                    const buttons = document.getElementsByTagName("button");
+                    for (const button of buttons) {
+                    button.disabled = false;
+                    }
+            }
+            };
+
+            if(pWord == cWord)
+            {
+                req.open("POST", "https://3524C.playfabapi.com/Client/RegisterPlayFabUser", true);
+                req.setRequestHeader("Content-Type", "application/json");
+                req.send(JSON.stringify(obj));
+            }
+            else
+            {
+                alert("Passwords do not match");
+            }
+        }
+
+        function verifyLogin(){
+            //This way no sneaky people can get around it
+            const buttons = document.getElementsByTagName("button");
+            for (const button of buttons) {
+            button.disabled = true;
+            }
+            
+            let req = new XMLHttpRequest();
+            var obj = {"Keys":"Master"};
+            req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+                let preJson = JSON.parse(req.responseText);
+                var secretKey = preJson.data.Data.Master;
+
+                submitInfo(secretKey);
+                delete secretKey;
+            }
+            };
+
+            req.open("POST", "https://3524C.playfabapi.com/Client/GetTitleData", true);
+            req.setRequestHeader("Content-Type", "application/json");
+            req.setRequestHeader("X-Authorization", sessionStorage.getItem("sessionTicket"));
+            req.send(JSON.stringify(obj));
+        }
+
+        
+
+        
+    </script>
+
+    <script>
+        
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+</html>

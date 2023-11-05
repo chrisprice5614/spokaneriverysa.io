@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spokane River YSA | Program</title>
+        <meta name="description" content="Welcome to the Spokane River Young Single Adults ward website! Here you can get information on when our activities are, who the bishopric is, and what our goals are for growing us spiritually and socially."/>
+        <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="https://use.typekit.net/pcf1uvo.css">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+        <script>
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active-now");
+                } else {
+                reveals[i].classList.remove("active-now");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="/nav.js"></script>
+
+        
+        <main>
+        <hr class="title-hr">
+        
+
+        <h1>Login</h1>
+
+        <form id="login-form">
+          
+            <div class="rows">
+                <div class="columns left-col">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" id = "uname" placeholder="Enter Username" name="uname" required class="cont-edit">
+                </div>
+                
+                <div class="columns right-col">
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" id = "psw" placeholder="Enter Password" name="psw" required class="cont-edit">
+                </div>
+            </div>
+        </form>
+        <div id = "before_replace"></div>
+        <div id = "post_replace"></div>
+            
+            <br>
+            <button onclick="login()" class="admin-button">Login</button>
+            
+        </main>
+
+    <footer>
+        <script id="foot_replace" src="/footer.js"></script>
+    </footer>
+    </body>
+    <script>
+    
+    if(sessionStorage.getItem("loggedIn"))
+    {
+        document.location.href = "/admin/admin-home.html";
+    }
+
+        function login(){
+            var myUsername = document.getElementById('uname').value;
+            var myPass = document.getElementById('psw').value;
+            var obj = {"Password":myPass,"TitleId":"3524C","Username":myUsername,"InfoRequestParameters":{"GetPlayerProfile":true}};
+            
+            let req = new XMLHttpRequest();
+
+            req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+                console.log(req.responseText);
+                
+                let preJson = JSON.parse(req.responseText);
+                if(preJson.code == 200)
+                {
+                    let sessionTicket = preJson.data.SessionTicket;
+                    let displayName = preJson.data.InfoResultPayload.PlayerProfile.DisplayName;
+                    
+                    if(displayName!=undefined)
+                    {
+                        sessionStorage.setItem("displayName", displayName);
+                        sessionStorage.setItem("sessionTicket", sessionTicket);
+                        sessionStorage.setItem("loggedIn", true);
+
+                        document.location.href = "/admin/admin-home.html";
+                    }
+                }
+                else
+                {
+                    var container = document.querySelector("#post_replace");
+                    var html = '';
+                    var newElement = document.createElement('div');
+                    newElement.id = "post_replace";
+                    newElement.className = "error-class";
+                    if(preJson.error == "AccountNotFound")
+                    {
+                        newElement.textContent = "Account Not Found";
+                    }
+                    else
+                    {
+                        newElement.textContent = "Incorrect Password";
+                    }
+                    container.replaceWith(newElement);
+                }
+                
+            }
+            };
+
+            req.open("POST", "https://3524C.playfabapi.com/Client/LoginWithPlayFab", true);
+            req.setRequestHeader("Content-Type", "application/json");
+            req.send(JSON.stringify(obj));
+        }        
+    </script>
+
+    <script>
+        
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+</html>

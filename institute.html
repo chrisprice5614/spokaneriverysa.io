@@ -1,35 +1,198 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Spokane River YSA - Institute</title>
-        <meta name = "keywords" content ="lds, latter-day saints, latter day saints, ysa, spokane">
-        <meta name = "viewport" content = "width=device-width">
-        <meta name = "description" content = "Information about the Spokane River YSA">
+        <title>Spokane River YSA | HOME</title>
+        <meta name="description" content="Welcome to the Spokane River Young Single Adults ward website! Here you can get information on when our activities are, who the bishopric is, and what our goals are for growing us spiritually and socially."/>
+        <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
         <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="https://use.typekit.net/pcf1uvo.css">
         <link rel="stylesheet" href="/themes/main.css" type="text/css">
+        <script>
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active-now");
+                } else {
+                reveals[i].classList.remove("active-now");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
     </head>
     <body>
         <header>
         </header>
-        <script id="nav_replace" src="nav.js"></script>
-        <h1 class="title">Institute</h1>
+        <script id="nav_replace" src="/nav.js"></script>
+
         <main>
-            <h4>What is Institute?</h4>
-            <p>
-                Institute is a class taught by a local church member where we delve into deep discussions about the gospel, the plan of salvation, church history,
-                and any other topic relating to The Church of Jesus Christ of Latter-Day Saints. Another wonderful aspect about institute is being able to meet and
-                socialize with other amazing individuals! Most people arrive early and stay late to converse with one another. <b>Dinner is provided!!</b>
-            </p>
-            <h4>Where is Institute?</h4>
-            <p>
-                <div><a href="https://www.google.com/maps/place/732+W+Indiana+Ave,+Spokane,+WA+99205" target="_blank">732 W Indiana Ave. Spokane WA 99205</a></div>
-                <div></div>
-                We are very fortunate to have our new institute building!
-            </p>
-            <h4>How is Institute?</h4>
-            <p>
-                Amazing! Come join us every Thursday night at 6:30. <b>Dinner is provided!!</b>
-            </p>
+        <hr class="title-hr">
+
+
+        <h1 class="title-class">Page Coming Soon!</h1>
+        
+        
+        
+        
+        <div id="loading"><h1>Loading...</h1></div>
+        <div class="container reveal"><div id = "post_replace"></div></div>
+            <!--Example!!!
+            <button class="collapsible">Tuesday September 5th</button>
+            <div class="content">
+              <h2>Event name!</h2>
+              <p>Information about the event</p>
+              Tuesday, September 5th at 6:30 PM<br>
+              <a href="https://www.google.com/maps/place/732+W+Indiana+Ave+Spokane" target="_blank">13302 E 10th Ave Spokane Valley 99216</a>
+              <hr class="hr-event">
+              <h2>Event name!</h2>
+              <p>Information about the event</p>
+              Tuesday, September 5th at 6:30 PM<br>
+              <a href="https://www.google.com/maps/place/732+W+Indiana+Ave+Spokane" target="_blank">13302 E 10th Ave Spokane Valley 99216</a>
+              <hr class="hr-event">
+            </div>
+            -->
+            <br>
         </main>
-        <script id="foot_replace" src="footer.js"></script>
+
+    <footer>
+        <script id="foot_replace" src="/footer.js"></script>
+    </footer>
     </body>
+
+        <script>
+            let req = new XMLHttpRequest();
+            var today = new Date();
+            var TweekDate = "";
+            var TmonthDate = "";
+            req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+                preJson = JSON.parse(req.responseText);
+                console.log(preJson);
+                var items = preJson.record.items;
+
+                console.log(items);
+
+                function custom_sort(a, b) {
+                    return new Date(a.date).getTime() - new Date(b.date).getTime();
+                }
+
+                items.sort(custom_sort);
+
+                var container = document.querySelector("#post_replace");
+                let index = 0;
+
+
+                var html = ``;
+                if(4 == 4)
+                {
+                    html += `<h2 class="text-center">Upcoming Events</h2>`
+                }
+                
+                for (let item of items) {
+                    index++;
+                var d = new Date(item.date);
+
+                if(d.getTime()>today.getTime()-(3600000*5))
+                {
+                    var weekDate = "";
+
+                    switch(d.getDay())
+                    {
+                        case 0: weekDate = "Sunday"; break;
+                        case 1: weekDate = "Monday"; break;
+                        case 2: weekDate = "Tuesday"; break;
+                        case 3: weekDate = "Wednesday"; break;
+                        case 4: weekDate = "Thursday"; break;
+                        case 5: weekDate = "Friday"; break;
+                        case 6: weekDate = "Saturday"; break;
+                    }
+
+                    var monthDate = "";
+
+                    switch(d.getMonth())
+                    {
+                        case 0: monthDate = "January"; break;
+                        case 1: monthDate = "February"; break;
+                        case 2: monthDate = "March"; break;
+                        case 3: monthDate = "April"; break;
+                        case 4: monthDate = "May"; break;
+                        case 5: monthDate = "June"; break;
+                        case 6: monthDate = "July"; break;
+                        case 7: monthDate = "August"; break;
+                        case 8: monthDate = "September"; break;
+                        case 9: monthDate = "October"; break;
+                        case 10: monthDate = "November"; break;
+                        case 11: monthDate = "December"; break;
+                    }
+
+                    var merid = "AM";
+                    var hour = d.getHours();
+
+                    if(hour==12)
+                    {
+                        merid = "PM";
+                    }
+                    if(hour==0)
+                    {
+                        hour = 12;
+                    }
+
+                    if(hour>12)
+                    {
+                        hour-=12;
+                        merid = "PM";
+                    }
+
+                    html += `
+                    <button class="collapsible">${weekDate}, ${monthDate} ${d.getDate()}</button>
+                        <div class="content">
+                            <h2>${item.title}</h2>
+                            <p>${item.info}</p>
+                            ${weekDate}, ${monthDate} ${d.getDate()} at ${hour}:${d.getMinutes()} ${merid}<br>
+                            <a href="https://www.google.com/maps/search/${item.address.replace(/ /g,'+')}" target="_blank">${item.address}</a>
+                        </div>
+                    `
+                }
+            }
+            container.insertAdjacentHTML('beforeend', html);
+            var toDel = document.getElementById("loading");
+            toDel.parentNode.removeChild(toDel);
+        }
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        };
+
+        req.open("GET", "https://api.jsonbin.io/v3/b/64fa6132e4033326cbd3bb9b/", true);
+        req.setRequestHeader("X-Access-Key", "$2b$10$9tGp5ZXHVRcUwR8K4iYY6.nocsSkAiQDYz.Q0Q4hv.LzxP1mYS/2m");
+        req.send();
+
+    </script>
+
+    <script>
+        
+    //Getting instagram info
+    let req = new XMLHttpRequest();
+
+    
+       
+    </script>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spokane River YSA | Program</title>
+        <meta name="description" content="Welcome to the Spokane River Young Single Adults ward website! Here you can get information on when our activities are, who the bishopric is, and what our goals are for growing us spiritually and socially."/>
+        <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="https://use.typekit.net/pcf1uvo.css">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+        <script>
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active-now");
+                } else {
+                reveals[i].classList.remove("active-now");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="/nav.js"></script>
+
+        
+        <main>
+        <hr class="title-hr">
+        
+
+        <h1>Admin Home</h1>
+
+        <div class="row">
+            <div class="columns-stack">
+                <button class="admin-button" onclick="window.location.href='/admin/admin-program.html';">Manage Program</button>
+            </div>
+            <div class="columns-stack">
+                <button class="admin-button" onclick="window.location.href='/admin/admin-events.html';">Manage Events</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns-stack">
+                <button class="admin-button" onclick="window.location.href='/admin/admin-register.html';">Add User</button>
+            </div>
+        </div>
+
+        <script>
+            if(!sessionStorage.getItem("loggedIn"))
+            {
+                document.location.href = "/admin/admin-login.html";
+            }
+
+        </script>
+
+        
+</html>

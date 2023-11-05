@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spokane River YSA | Manage Events</title>
+        <meta name="description" content="Welcome to the Spokane River Young Single Adults ward website! Here you can get information on when our activities are, who the bishopric is, and what our goals are for growing us spiritually and socially."/>
+        <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="https://use.typekit.net/pcf1uvo.css">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+        <script>
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active-now");
+                } else {
+                reveals[i].classList.remove("active-now");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="/nav.js"></script>
+
+        
+        <main>
+        <hr class="title-hr">
+        
+
+        <h1>Edit Events</h1>
+
+        <div id="loading"><h1>Loading...</h1></div>
+
+        <!--
+        <table>
+            <tr><td><div contenteditable>I'm editable</div></td><td><div contenteditable>I'm also editable</div></td></tr>
+            <tr><td>I'm not editable</td></tr>
+            </table>
+            -->
+        <div id = "before_replace"></div>
+        <div id = "post_replace"></div>
+        <div id = "msg_replace"></div>
+            
+            <br>
+            
+        </main>
+
+    <footer>
+        <script id="foot_replace" src="/footer.js"></script>
+    </footer>
+    </body>
+    <script>
+
+        if(!sessionStorage.getItem("loggedIn"))
+        {
+            document.location.href = "/admin/admin-login.html";
+        }
+
+        function addRow(){
+            //first div
+            var table = document.getElementById("addRowsHere");
+            let row = document.createElement("tr");
+
+            let c1 = document.createElement("td");
+            let c2 = document.createElement("td");
+            let c3 = document.createElement("td");
+
+            let div1 = document.createElement("div");
+            let div2 = document.createElement("div");
+
+            let coolBtn = document.createElement("button");
+
+            coolBtn.setAttribute("onclick","delRow(this)");
+            coolBtn.className = "admin-button";
+            coolBtn.style = "height: 32px; font-size: 12pt;";
+            coolBtn.innerText = "X";
+
+            c3.appendChild(coolBtn);
+
+            let timeInput = document.createElement("input");
+            timeInput.className = "date-input";
+            timeInput.type = "datetime-local";
+
+            div1.contentEditable = true;
+
+            div2.appendChild(timeInput);
+
+            div1.className = "cont-edit";
+            div2.className = "cont-edit";
+
+
+            div1.innerText = "Event Name";
+
+
+            c1.appendChild(div1);
+            c2.appendChild(div2);
+
+            row.appendChild(c1);
+            row.appendChild(c2);
+            row.appendChild(c3);
+
+            table.getElementsByTagName('tbody')[0].appendChild(row);
+
+            //second row
+            let row2 = document.createElement("tr");
+
+            let c12 = document.createElement("td");
+            let c22 = document.createElement("td");
+
+            let div12 = document.createElement("div");
+            let div22 = document.createElement("div");
+
+
+            div12.contentEditable = true;
+            div22.contentEditable = true;
+
+            div12.className = "cont-edit";
+            div22.className = "cont-edit";
+
+
+            div12.innerText = "Event Description";
+            div22.innerText = "Event Address"
+
+
+            c12.appendChild(div12);
+            c22.appendChild(div22);
+
+            row2.appendChild(c12);
+            row2.appendChild(c22);
+
+            table.getElementsByTagName('tbody')[0].appendChild(row2);
+
+            let lastRow = document.createElement("tr");
+            let lastC = document.createElement("td");
+            let lastDiv = document.createElement("div");
+            lastDiv.innerText = "-";
+            lastC.style = "text-align: center";
+
+            lastC.appendChild(lastDiv);
+            lastRow.appendChild(lastC);
+            table.getElementsByTagName('tbody')[0].appendChild(lastRow);
+        }
+
+        function delRow(id){
+            var theRow = id.parentNode.parentNode.rowIndex;
+            id.parentElement.parentElement.parentElement.deleteRow(theRow+1);
+            id.parentElement.parentElement.parentElement.deleteRow(theRow+1);
+            id.parentElement.parentElement.parentElement.deleteRow(theRow);
+            
+        }
+
+        function removeRow(){
+            var table = document.getElementById("addRowsHere");
+            var eventName = table.rows[0].cells[0].textContent.replace(/(\r\n|\n|\r)/gm, "");
+            eventName = eventName.replace(/\s+/g, " ");;
+
+            if(confirm("Delete "+eventName+"?"))
+            {
+
+                document.getElementById("addRowsHere").deleteRow(0);
+                document.getElementById("addRowsHere").deleteRow(0);
+                document.getElementById("addRowsHere").deleteRow(0);
+            }
+
+        }
+
+        function submitInfo(key){
+
+            
+
+            var table = document.getElementById("addRowsHere");
+            var obj = {};
+            var items = [];
+            var row, rows = table.rows;
+
+            for (var i=0, iLen=rows.length; i<iLen; i+=3) {
+                row = rows[i];
+                var ttext = row.cells[0].textContent.replace(/(\r\n|\n|\r)/gm, "");
+                ttext = ttext.replace(/\s+/g, " ");
+
+                var dtext = row.cells[1].querySelector("input").value;
+
+                row = rows[i+1];
+                var itext = row.cells[0].textContent.replace(/(\r\n|\n|\r)/gm, "");
+                itext = itext.replace(/\s+/g, " ");
+
+                var atext = row.cells[1].textContent.replace(/(\r\n|\n|\r)/gm, "");
+                atext = atext.replace(/\s+/g, " ");
+                items[i/3] = {"date": dtext, "title": ttext, "info": itext, "address": atext};
+            }
+            obj["items"] = items;
+
+            
+            let req = new XMLHttpRequest();
+
+            req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+
+                var container = document.querySelector("#msg_replace");
+                    var newElement = document.createElement('div');
+                    newElement.id = "msg_replace";
+                    newElement.className = "complete-class";
+
+                    newElement.textContent = "Events Updated!!";
+
+                    container.replaceWith(newElement);
+
+                    const buttons = document.getElementsByTagName("button");
+                    for (const button of buttons) {
+                    button.disabled = false;
+                    }
+            }
+            };
+
+            req.open("PUT", "https://api.jsonbin.io/v3/b/64fa6132e4033326cbd3bb9b", true);
+            req.setRequestHeader("Content-Type", "application/json");
+            req.setRequestHeader("X-Master-Key", key);
+            req.send(JSON.stringify(obj));
+        }
+
+        function verifyLogin(){
+            //This way no sneaky people can get around it
+            const buttons = document.getElementsByTagName("button");
+            for (const button of buttons) {
+            button.disabled = true;
+            }
+            
+
+            var obj = {"Keys":"Master"};
+            req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+                let preJson = JSON.parse(req.responseText);
+                var secretKey = preJson.data.Data.Master;
+
+                submitInfo(secretKey);
+                delete secretKey;
+            }
+            };
+
+            req.open("POST", "https://3524C.playfabapi.com/Client/GetTitleData", true);
+            req.setRequestHeader("Content-Type", "application/json");
+            req.setRequestHeader("X-Authorization", sessionStorage.getItem("sessionTicket"));
+            req.send(JSON.stringify(obj));
+        }
+
+        let req = new XMLHttpRequest();
+
+        var today = new Date();
+        var TweekDate = "";
+        var TmonthDate = "";
+
+        req.onreadystatechange = () => {
+        if (req.readyState == XMLHttpRequest.DONE) {
+            preJson = JSON.parse(req.responseText);
+            console.log(preJson);
+            var items = preJson.record.items;
+
+            console.log(items);
+
+                var container = document.querySelector("#before_replace");
+                let index = 0;
+                
+                
+
+                var html = `<table id="addRowsHere">
+                    `;
+
+                for (let item of items) {
+                    index++;
+                    
+                    html += `
+                    <tr class="table-wrap">
+                    
+                        <td style="width: 10%;">
+                            <div contenteditable class="cont-edit">${item.title}</div>
+                        </td>
+                        
+                        <td style="width: 40%;">
+                            <div class="cont-edit"><input class="date-input" type="datetime-local" value="${item.date}"/></div>
+                        </td>
+                        <td class="columnsLil" style="text-align: left;">
+                            <button onclick="delRow(this)" class="admin-button" style="height: 32px; font-size: 12pt;">X</button>
+                        </td>
+                    </td>
+
+                    </tr>
+                    <tr class="table-wrap">
+
+                        <td style="width: 40%;">
+                            <div contenteditable class="cont-edit">${item.info}</div>
+                        </td>
+
+                        <td>
+                            <div contenteditable class="cont-edit">${item.address}</div>
+                        </td>
+                        
+                    </tr>
+                    <tr><td style="text-align: center;">-</td></tr>`;
+                
+                }
+                html += `
+                
+                
+                </table>
+
+                
+                
+                <button onclick="addRow()" href="#" class="admin-button">Add Event</button>               
+                <button onclick="verifyLogin()" class="admin-button">Submit</button>`;
+                container.insertAdjacentHTML('beforeend', html);
+                var toDel = document.getElementById("loading");
+                toDel.parentNode.removeChild(toDel);
+
+            }
+
+        }
+
+        req.open("GET", "https://api.jsonbin.io/v3/b/64fa6132e4033326cbd3bb9b/", true);
+        req.setRequestHeader("X-Access-Key", "$2b$10$9tGp5ZXHVRcUwR8K4iYY6.nocsSkAiQDYz.Q0Q4hv.LzxP1mYS/2m");
+        req.send();
+        
+
+        
+    </script>
+
+    <script>
+        
+
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+</html>
