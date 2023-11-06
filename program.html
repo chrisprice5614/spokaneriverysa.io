@@ -7,6 +7,7 @@
         <meta name = "author" content = "Chris Price">
         <link rel="stylesheet" href="https://use.typekit.net/pcf1uvo.css">
         <link rel="stylesheet" href="/themes/main.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <script>
             function reveal() {
             var reveals = document.querySelectorAll(".reveal");
@@ -225,7 +226,7 @@
                         <div class="content">
                             <h2>${item.title}</h2>
                             <p>${item.info}</p>
-                            ${weekDate}, ${monthDate} ${d.getDate()} at ${hour}:${d.getMinutes()} ${merid}<br>
+                            ${weekDate}, ${monthDate} ${d.getDate()} at ${hour}:${(d.getMinutes() < 10 ? '0' : '') + d.getMinutes()} ${merid}<br>
                             <a href="https://www.google.com/maps/search/${item.address.replace(/ /g,'+')}" target="_blank">${item.address}</a>
                         </div>
                     `
