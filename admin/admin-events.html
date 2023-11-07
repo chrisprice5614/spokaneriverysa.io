@@ -278,6 +278,14 @@
 
                 for (let item of items) {
                     index++;
+                    var dCompare = new Date(item.date);
+                    var now = new Date();
+                    let extraClass = "";
+                    if(dCompare < now)
+                    {
+                        extraClass = "date-late";
+                        
+                    }
                     
                     html += `
                     <tr class="table-wrap">
@@ -287,7 +295,7 @@
                         </td>
                         
                         <td style="width: 40%;">
-                            <div class="cont-edit"><input class="date-input" type="datetime-local" value="${item.date}"/></div>
+                            <div class="cont-edit ${extraClass}"><input class="date-input" type="datetime-local" value="${item.date}"/></div>
                         </td>
                         <td class="columnsLil" style="text-align: left;">
                             <button onclick="delRow(this)" class="admin-button" style="height: 32px; font-size: 12pt;">X</button>
