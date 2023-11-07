@@ -195,6 +195,18 @@ h1{
     width: 100%;
 }
 
+.mid-link{
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,0,0);
+    color: var(--blue);
+    transition: all 220ms ease-out;
+}
+
+.mid-link:hover{
+    text-decoration-color: var(--linkHover);
+    color: var(--linkHover);
+}
+
 .title-class{
     display: block;
     text-align: center;
@@ -263,6 +275,11 @@ h1{
     margin: 0px;
     padding: 0px;
     border-width: 1px;
+  }
+
+  .normal-ul{
+    font-size:12pt;
+    list-style-type:disc;
   }
   
   @media all and (max-width: 800px) {
