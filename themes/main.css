@@ -607,6 +607,16 @@ tr{
     box-shadow: 0 20px 20px -20px #333;
 }
 
+.date-late{
+    border-color: red;
+}
+
+@media only screen and (max-width: 750px) {
+    .hide-mobile {
+      display: none;
+    }
+  }
+
 .cont-edit:hover{
     background-color: var(--blue);
 }
