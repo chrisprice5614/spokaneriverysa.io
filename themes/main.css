@@ -641,3 +641,14 @@ tr{
     color: red;
     text-align: center;
 }
+
+.litlink{
+    color: var(--blue);
+    transition-property: color; 
+    transition-duration: 220ms;
+    transition-timing-function: ease-out;
+}
+
+.litlink:hover{
+    color: var(--linkHover);
+}
