@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spokane River YSA | HOME</title>
+        <meta name="description" content="Welcome to the Spokane River Young Single Adults ward website! Here you can get information on when our activities are, who the bishopric is, and what our goals are for growing us spiritually and socially."/>
+        <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+        <meta name = "author" content = "Chris Price">
+        <link rel="stylesheet" href="https://use.typekit.net/pcf1uvo.css">
+        <link rel="stylesheet" href="/themes/main.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script>
+            function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active-now");
+                } else {
+                reveals[i].classList.remove("active-now");
+                }
+            }
+            }
+
+            window.addEventListener("scroll", reveal);
+        </script>
+    </head>
+    <body>
+        <header>
+        </header>
+        <script id="nav_replace" src="/nav.js"></script>
+
+        <div class="video-wrapper">
+            <video playsinline autoplay muted loop class="hide-mobile">
+            <source src="/media/vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        <main>
+        <hr class="title-hr">
+        
+        <img class="main-logo" src="/media/logoOpaque.jpg">
+
+        <h2 class="title-class">Ward mission plan coming soon!</h2>
+        
+        
+        <div id="loading"><h1>Loading...</h1></div>
+        <div class="container"><div id = "post_replace"></div></div>
+            <!--Example!!!
+            <button class="collapsible">Tuesday September 5th</button>
+            <div class="content">
+              <h2>Event name!</h2>
+              <p>Information about the event</p>
+              Tuesday, September 5th at 6:30 PM<br>
+              <a href="https://www.google.com/maps/place/732+W+Indiana+Ave+Spokane" target="_blank">13302 E 10th Ave Spokane Valley 99216</a>
+              <hr class="hr-event">
+              <h2>Event name!</h2>
+              <p>Information about the event</p>
+              Tuesday, September 5th at 6:30 PM<br>
+              <a href="https://www.google.com/maps/place/732+W+Indiana+Ave+Spokane" target="_blank">13302 E 10th Ave Spokane Valley 99216</a>
+              <hr class="hr-event">
+            </div>
+            -->
+            <br>
+            
+
+            <div style="text-align: center;">
+                <!--img src="/media/flyer.jpg" style="width: 60%; margin-left: 20%; margin-right:20%;"-->
+                <a href="https://us05web.zoom.us/j/2436776918?pwd=TUhYRlZlRE84Q1FSMGIvYm5aTmVvZz09#success" target="_blank">Click here to join Zoom for sacrament on Sundays at 1:30 PM</a>
+            </div>
+            
+        </main>
+
+    <footer>
+        <script id="foot_replace" src="/footer.js"></script>
+    </footer>
+    </body>
+
+        <script>
+            let req = new XMLHttpRequest();
+            var today = new Date();
+            var TweekDate = "";
+            var TmonthDate = "";
+            req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+                preJson = JSON.parse(req.responseText);
+                console.log(preJson);
+                var items = preJson.record.items;
+
+                console.log(items);
+
+                function custom_sort(a, b) {
+                    return new Date(a.date).getTime() - new Date(b.date).getTime();
+                }
+
+                items.sort(custom_sort);
+
+                var container = document.querySelector("#post_replace");
+                let index = 0;
+
+
+                var html = ``;
+                if(4 == 4)
+                {
+                    html += `<h2 class="text-center">Upcoming Events</h2>`
+                }
+                
+                for (let item of items) {
+                    index++;
+                var d = new Date(item.date);
+
+                if(d.getTime()>today.getTime()-(3600000*5))
+                {
+                    var weekDate = "";
+
+                    switch(d.getDay())
+                    {
+                        case 0: weekDate = "Sunday"; break;
+                        case 1: weekDate = "Monday"; break;
+                        case 2: weekDate = "Tuesday"; break;
+                        case 3: weekDate = "Wednesday"; break;
+                        case 4: weekDate = "Thursday"; break;
+                        case 5: weekDate = "Friday"; break;
+                        case 6: weekDate = "Saturday"; break;
+                    }
+
+                    var monthDate = "";
+
+                    switch(d.getMonth())
+                    {
+                        case 0: monthDate = "January"; break;
+                        case 1: monthDate = "February"; break;
+                        case 2: monthDate = "March"; break;
+                        case 3: monthDate = "April"; break;
+                        case 4: monthDate = "May"; break;
+                        case 5: monthDate = "June"; break;
+                        case 6: monthDate = "July"; break;
+                        case 7: monthDate = "August"; break;
+                        case 8: monthDate = "September"; break;
+                        case 9: monthDate = "October"; break;
+                        case 10: monthDate = "November"; break;
+                        case 11: monthDate = "December"; break;
+                    }
+
+                    var merid = "AM";
+                    var hour = d.getHours();
+
+                    if(hour==12)
+                    {
+                        merid = "PM";
+                    }
+                    if(hour==0)
+                    {
+                        hour = 12;
+                    }
+
+                    if(hour>12)
+                    {
+                        hour-=12;
+                        merid = "PM";
+                    }
+
+                    html += `
+                    <button class="collapsible">${weekDate}, ${monthDate} ${d.getDate()} - <b>${item.title}</b></button>
+                        <div class="content">
+                            <h2>${item.title}</h2>
+                            <p>${item.info}</p>
+                            ${weekDate}, ${monthDate} ${d.getDate()} at ${hour}:${(d.getMinutes() < 10 ? '0' : '') + d.getMinutes()} ${merid}<br>
+                            <a href="https://www.google.com/maps/search/${item.address.replace(/ /g,'+')}" target="_blank">${item.address}</a>
+                        </div>
+                    `
+                }
+            }
+            container.insertAdjacentHTML('beforeend', html);
+            var toDel = document.getElementById("loading");
+            toDel.parentNode.removeChild(toDel);
+        }
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        };
+
+        req.open("GET", "https://api.jsonbin.io/v3/b/64fa6132e4033326cbd3bb9b/", true);
+        req.setRequestHeader("X-Access-Key", "$2b$10$9tGp5ZXHVRcUwR8K4iYY6.nocsSkAiQDYz.Q0Q4hv.LzxP1mYS/2m");
+        req.send();
+
+    </script>
+
+   
+    <script>
+        
+        const wrapper = document.querySelector(".wrapper"),
+        carousel = document.querySelector(".carousel"),
+        images = document.querySelectorAll("img"),
+        buttons = document.querySelectorAll(".button");
+        let imageIndex = 1,
+        intervalId;
+        // Define function to start automatic image slider
+        const autoSlide = () => {
+        // Start the slideshow by calling slideImage() every 3 seconds
+        intervalId = setInterval(() => slideImage(++imageIndex), 3000);
+        };
+        // Call autoSlide function on page load
+        autoSlide();
+        // A function that updates the carousel display to show the specified image
+        const slideImage = () => {
+        // Calculate the updated image index
+        imageIndex = imageIndex === images.length-1 ? 0 : imageIndex < 0 ? images.length - 1 : imageIndex;
+        // Update the carousel display to show the specified image
+        carousel.style.transform = `translate(-${imageIndex * 100}%)`;
+        };
+        // A function that updates the carousel display to show the next or previous image
+        const updateClick = (e) => {
+        // Stop the automatic slideshow
+        clearInterval(intervalId);
+        // Calculate the updated image index based on the button clicked
+        imageIndex += e.target.id === "next" ? 1 : -1;
+        slideImage(imageIndex);
+        // Restart the automatic slideshow
+        autoSlide();
+        };
+        // Add event listeners to the navigation buttons
+        buttons.forEach((button) => button.addEventListener("click", updateClick));
+        // Add mouseover event listener to wrapper element to stop auto sliding
+        wrapper.addEventListener("mouseover", () => clearInterval(intervalId));
+        // Add mouseleave event listener to wrapper element to start auto sliding again
+        wrapper.addEventListener("mouseleave", autoSlide);
+
+    
+       
+    </script>
+</html>
